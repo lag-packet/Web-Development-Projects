@@ -11,6 +11,7 @@ body {
 .game-display {
     width: 80%;
     max-width: 600px;
+    height: 400px; /* adjust this value as needed */
     border: 3px solid #ff5722; /* a bright, cartoonish orange */
     padding: 20px;
     border-radius: 15px;
@@ -23,6 +24,13 @@ h2 {
     color: #ff5722; /* matching the border color */
     text-shadow: 2px 2px #ffdd57; /* a text shadow for a 3D effect */
 }
+
+/* Result */
+h2:nth-child(3) {
+    height: 50px; /* adjust this value as needed */
+    line-height: 50px; /* vertically align the text */
+}
+
 
 /* Buttons */
 button {
