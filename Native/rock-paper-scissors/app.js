@@ -20,7 +20,12 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
             setTimeout(() => {
                 resultDisplay.classList.add('fade-in');
             }, 50); // samll delay
+
+            setTimeout(() => {
+                resultDisplay.innerHTML = ""; // Clear result on click.
+            }, 50);
         }, 1000); // 1 sec
+        
     }));
 
 function generateComputerChoice() {
