@@ -11,7 +11,16 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
         userChoice = e.target.id;
         userChoiceDisplay.innerHTML = userChoice;
         generateComputerChoice();
+        resultDisplay.classList.add('fade-in');
         resultDisplay.innerHTML = getResult();
+
+        setTimeout(() => {
+            resultDisplay.classList.remove('fade-in');
+
+            setTimeout(() => {
+                resultDisplay.classList.add('fade-in');
+            }, 50); // samll delay
+        }, 1000); // 1 sec
     }));
 
 function generateComputerChoice() {

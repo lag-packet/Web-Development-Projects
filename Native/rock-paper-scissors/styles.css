@@ -4,48 +4,68 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f5f5f5;
-    font-family: 'Arial', sans-serif;
+    background-color: #ffdd57; /* a light, playful yellow */
+    font-family: 'Comic Sans MS', 'Chalkduster', sans-serif; /* a playful, cartoonish font */
 }
 
 .game-display {
     width: 80%;
     max-width: 600px;
-    border: 3px solid #33cc33;
+    border: 3px solid #ff5722; /* a bright, cartoonish orange */
     padding: 20px;
     border-radius: 15px;
     background-color: #fff;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* a slightly darker shadow for more depth */
     text-align: center;
 }
 
 h2 {
-    color: #333;
+    color: #ff5722; /* matching the border color */
+    text-shadow: 2px 2px #ffdd57; /* a text shadow for a 3D effect */
 }
 
+/* Buttons */
 button {
     margin: 10px;
     padding: 10px 20px;
+    width: 100px; /* set a specific width for button */
+    height: 50px; /* set a specific height for button */
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
+    font-weight: bold; /* make the font bold */
     cursor: pointer;
     transition: background 0.3s ease;
+    color: #fff;
+    text-shadow: 2px 2px #ffdd57;
 }
 
 button#rock {
-    background-color: #999;
+    background-color: #4caf50; /* a bright, cartoonish green */
 }
 
 button#paper {
-    background-color: #fff;
-    color: #333;
+    background-color: #2196f3; /* a bright, cartoonish blue */
 }
 
 button#scissors {
-    background-color: #ccc;
+    background-color: #f44336; /* a bright, cartoonish red */
 }
 
 button:hover {
     opacity: 0.8;
+    transform: scale(1.1); /* make the buttons grow a bit when hovered over */
+}
+
+button:active {
+    transform: scale(0.95); /* Shrink a bit */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
 }
