@@ -6,7 +6,8 @@ let userChoice;
 let computerChoice;
 let result;
 
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', 
+/*
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',
     (e) => {
         userChoice = e.target.id;
         userChoiceDisplay.innerHTML = userChoice;
@@ -17,17 +18,39 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
         // Fade effect for result display.
         setTimeout(() => {
             resultDisplay.classList.remove('fade-in');
-        
+
             setTimeout(() => {
                 resultDisplay.innerHTML = ""; // Clear result on click.
-        
+
                 setTimeout(() => {
-                    resultDisplay.classList.add('fade-in');
+                    resultDisplay.classList.add('fade-out');
                 }, 50); // small delay
             }, 50);
         }, 1000); // 1 sec.        
-        
+
+    }));*/
+
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',
+    (e) => {
+        userChoice = e.target.id;
+        userChoiceDisplay.innerHTML = userChoice;
+        generateComputerChoice();
+        resultDisplay.classList.add('fade-in');
+        resultDisplay.innerHTML = getResult();
+
+        setTimeout(() => {
+            resultDisplay.classList.remove('fade-in');
+            resultDisplay.classList.add('fade-out');
+
+            setTimeout(() => {
+                resultDisplay.classList.remove('fade-out');
+                resultDisplay.innerHTML = ""; // Clear result after fade-out animation completes.
+            }, 2000); // 2 sec to match fade-out animation duration
+        }, 1000); // 1 sec
+
     }));
+
+
 
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1;
@@ -35,10 +58,10 @@ function generateComputerChoice() {
 
     if (randomNumber === 1) {
         computerChoice = 'rock';
-    } 
+    }
     else if (randomNumber === 2) {
         computerChoice = 'scissors';
-    } 
+    }
     else {
         computerChoice = 'paper';
     }
