@@ -27,8 +27,9 @@ h2 {
 
 /* Result */
 h2:nth-child(3) {
-    height: 50px; /* adjust this value as needed */
-    line-height: 50px; /* vertically align the text */
+    /* Reserve space for result.*/
+    height: 50px; 
+    line-height: 50px; 
 }
 
 
