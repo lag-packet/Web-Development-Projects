@@ -14,17 +14,18 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
         resultDisplay.classList.add('fade-in');
         resultDisplay.innerHTML = getResult();
 
+        // Fade effect for result display.
         setTimeout(() => {
             resultDisplay.classList.remove('fade-in');
-
-            setTimeout(() => {
-                resultDisplay.classList.add('fade-in');
-            }, 50); // samll delay
-
+        
             setTimeout(() => {
                 resultDisplay.innerHTML = ""; // Clear result on click.
+        
+                setTimeout(() => {
+                    resultDisplay.classList.add('fade-in');
+                }, 50); // small delay
             }, 50);
-        }, 1000); // 1 sec
+        }, 1000); // 1 sec.        
         
     }));
 
