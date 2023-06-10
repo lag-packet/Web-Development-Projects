@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Pacifico', cursive;
+    background-image: url('./imgs/game_background.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
