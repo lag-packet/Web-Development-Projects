@@ -6,38 +6,15 @@ let userChoice;
 let computerChoice;
 let result;
 
-/*
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',
     (e) => {
         userChoice = e.target.id;
         userChoiceDisplay.innerHTML = userChoice;
         generateComputerChoice();
+
+        // Fade effect on result display
         resultDisplay.classList.add('fade-in');
         resultDisplay.innerHTML = getResult();
-
-        // Fade effect for result display.
-        setTimeout(() => {
-            resultDisplay.classList.remove('fade-in');
-
-            setTimeout(() => {
-                resultDisplay.innerHTML = ""; // Clear result on click.
-
-                setTimeout(() => {
-                    resultDisplay.classList.add('fade-out');
-                }, 50); // small delay
-            }, 50);
-        }, 1000); // 1 sec.        
-
-    }));*/
-
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',
-    (e) => {
-        userChoice = e.target.id;
-        userChoiceDisplay.innerHTML = userChoice;
-        generateComputerChoice();
-        resultDisplay.classList.add('fade-in');
-        resultDisplay.innerHTML = getResult();
-
         setTimeout(() => {
             resultDisplay.classList.remove('fade-in');
             resultDisplay.classList.add('fade-out');
