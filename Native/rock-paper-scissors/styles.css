@@ -2,37 +2,44 @@
 
 body {
     font-family: 'Pacifico', cursive;
-    background-image: url('./imgs/game_background.jpg'); /*taken from freepik*/
+    background-image: url('./imgs/game_background.jpg');
+    /*taken from freepik*/
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #ffdd57; /* a light, playful yellow */
+    background-color: #ffdd57;
+    /* a light, playful yellow */
 }
 
 .game-display {
     width: 80%;
     max-width: 600px;
-    height: 400px; /* adjust this value as needed */
-    border: 3px solid #ff5722; /* a bright, cartoonish orange */
+    height: 400px;
+    /* adjust this value as needed */
+    border: 3px solid #ff5722;
+    /* a bright, cartoonish orange */
     padding: 20px;
     border-radius: 15px;
     background-color: #fff;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* a slightly darker shadow for more depth */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    /* a slightly darker shadow for more depth */
     text-align: center;
 }
 
 h2 {
-    color: #ff5722; /* matching the border color */
-    text-shadow: 2px 2px #ffdd57; /* a text shadow for a 3D effect */
+    color: #ff5722;
+    /* matching the border color */
+    text-shadow: 2px 2px #ffdd57;
+    /* a text shadow for a 3D effect */
 }
 
 /* Result */
 h2:nth-child(3) {
     /* Reserve space for result.*/
-    height: 50px; 
-    line-height: 50px; 
+    height: 50px;
+    line-height: 50px;
 }
 
 
@@ -40,12 +47,15 @@ h2:nth-child(3) {
 button {
     margin: 10px;
     padding: 10px 20px;
-    width: 100px; /* set a specific width for button */
-    height: 50px; /* set a specific height for button */
+    width: 100px;
+    /* set a specific width for button */
+    height: 50px;
+    /* set a specific height for button */
     border: none;
     border-radius: 15px;
     font-size: 16px;
-    font-weight: bold; /* make the font bold */
+    font-weight: bold;
+    /* make the font bold */
     cursor: pointer;
     transition: background 0.3s ease;
     color: #fff;
@@ -53,39 +63,72 @@ button {
 }
 
 button#rock {
-    background-color: #4caf50; /* a bright, cartoonish green */
+    background-color: #4caf50;
+    /* a bright, cartoonish green */
 }
 
 button#paper {
-    background-color: #2196f3; /* a bright, cartoonish blue */
+    background-color: #2196f3;
+    /* a bright, cartoonish blue */
 }
 
 button#scissors {
-    background-color: #f44336; /* a bright, cartoonish red */
+    background-color: #f44336;
+    /* a bright, cartoonish red */
 }
 
 button:hover {
     opacity: 0.8;
-    transform: scale(1.1); /* make the buttons grow a bit when hovered over */
+    transform: scale(1.1);
+    /* make the buttons grow a bit when hovered over */
 }
 
 button:active {
-    transform: scale(0.95); /* Shrink a bit */
+    transform: scale(0.95);
+    /* Shrink a bit */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .fade-in {
     animation: fadeIn 2s ease-in-out;
 }
+
 .fade-out {
     animation: fadeOut 2s ease-out;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .game-display {
+        width: 90%;
+        /* Increase the width on small screens */
+        font-size: 14px;
+        /* Reduce the font size on small screens */
+    }
+
+    button {
+        width: 80px;
+        /* Reduce the button size on small screens */
+        height: 40px;
+        font-size: 14px;
+    }
 }
